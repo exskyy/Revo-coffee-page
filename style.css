@@ -1,0 +1,778 @@
+*{
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+}
+body{
+    border: 1px solid var(--black);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+:root{
+    --white: #fff;
+    --black: #000;
+    --primary: #415167;
+    --accent: #C7A17A;
+    --darkGREY: #151D28;
+    --lightGREY: #EDF0F5;
+    --textGREY: #232C38;
+}
+/* ==================== header ======================= */
+/*
+.nav__list{
+    list-style: none;
+}
+.nav__list__item{
+    margin-bottom: 28px;
+    font-family: Nunito;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #EDF0F5;
+}
+.item1{
+    font-family: Nunito;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #EDF0F5;
+    margin-bottom: 35px;
+} */
+/* ==================================================
+======================== header ==================
+================================================== */
+
+header{
+    display: grid;
+    grid-template-columns: 30vw 40vw auto;
+    min-height: 100dvh;
+}
+/* ================= белый фон + текст =============== */
+.header__text{
+    position: relative;
+    padding: 70px 0;
+    left: 15vw;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.header__logo{
+    width: 100px;
+    height: 35px;
+    padding-top: 5px;
+    margin: 0 0 0 -15px;
+}
+.header__title{
+    font-family: Montserrat;
+    font-weight: 900;
+    font-size: 3.3rem;
+    line-height: 70px;
+    color: var(--primary);
+}
+.herader__title--white{
+    color: var(--white);
+    background-color: var(--accent);
+    padding: 2px 15px;
+    margin: 0 0 0 -15px;
+}
+/* ============== видео ===================== */
+.video__container{
+    width: 100%;
+    max-height: 100dvh;
+    position: relative;
+}
+.video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.play__btn{
+    position:absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+
+    transform:translate(-50%, -50%);
+
+    width:50px;
+    height:50px;
+
+    border:none;
+    border-radius:50%;
+
+    background: var(--white);
+    cursor:pointer;
+
+    font-size: 1rem;
+    text-align: center;
+}
+/* =================== навигация+корзина ============== */
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    background: var(--primary);
+}
+.cart{
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    position: relative;
+}
+.cart__img{
+    position: absolute;
+    top: 8px;
+
+}
+.cart__col{
+    position: absolute;
+    top: -6px;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav{
+    padding: 75px 0 0 55px;
+}
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+}
+.nav__list li a{
+    text-decoration: none;
+    font-family: Nunito;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0px;
+    color: var(--lightGREY);
+}
+
+
+/* ==================================================
+ ====================== main ================== 
+================================================== */
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+/* ===============================================
+====================== info ===================
+=============================================== */
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    width: 100%;
+    max-width: 1104px;
+    margin: 90px auto 130px auto;
+}
+.info__text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.info__subtitle{
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: var(--primary);
+}
+.info__title{
+    font-family: Montserrat;
+    font-weight: 900;
+    font-size: 1.875rem;
+    line-height: 2.125rem;
+    color: var(--primary);
+}
+.info__list{
+    display: flex;
+    gap: 70px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: balance;
+}
+.info__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info__img{
+    margin-bottom: 40px;
+}
+.info__list__title{
+    font-family: Nunito;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #232C38;
+    margin-bottom: 10px;
+}
+.info__list__description{
+    font-family: Nunito;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    color: #151D28;
+}
+
+
+/* ====================== coffee-slider ==================== */
+
+.coffee-slider{
+    position: relative;
+    min-height: 895px;
+    background: linear-gradient(to right, #415167 30vw, #fff 30vw);
+    background-color: #415167;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;  
+    overflow:hidden;
+}
+.coffee__swiper{
+    width: 100%;
+    padding-left: 10vw;
+}
+.coffee__slide{
+    display: flex;
+    gap: 43px;
+    height: 256px;
+    box-shadow: 0px 4px 24px 0px #CDCDCD80;
+    background-color: #fff;
+}
+.coffee__prev,
+.coffee__next {
+    position: absolute;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 2rem;
+    text-align: center;
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.coffee__prev{
+    left: 50px;
+    top: 50%;
+}
+.coffee__next{
+    right: 50px;
+    top: 50%;
+}
+.coffee__prev:hover,
+.coffee__next:hover {
+    background: #b28f68;   
+}
+
+
+.slider__text{
+    margin: 90px 0 70px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.slider__primary{
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 24px;
+    color: #415167;
+    text-align: center;
+}
+.slider__secondary{
+    font-family: Montserrat;
+    font-weight: 900;
+    font-size: 1.875rem;
+    line-height: 34px;
+    color: #415167;
+    text-align: center;
+}
+.slider__img{
+    width: 100%;
+    max-width: 235px;  
+    object-fit: cover;
+}
+.slider__card{
+    margin: 42px 60px 42px 0;
+}
+.slider__price{
+    color: #C7A17A;
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 24px;
+}
+.slider__name{
+    font-family: Nunito;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 28px;
+    color: #232C38;
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+.slider__description{
+    font-family: Nunito;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 100%;
+    color: #151D28;
+    margin-bottom: 36px;
+}
+.slider__btns{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.slider__btn{
+    font-family: Nunito;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 100%;
+    text-align: center;
+    color: #F9FBFF;
+    background-color: #C7A17A;
+    border-radius: 19px;
+    padding: 6px 15px;
+    text-decoration: none;
+}
+.slider__secbtn{
+    font-family: Nunito;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 100%;
+    color: #415167;
+    text-decoration: none;
+}
+
+
+/* =======================================================
+====================== giftstet =======================
+======================================================= */
+
+
+.giftset{
+
+    height: 802px;
+    background: linear-gradient(90deg, #EDF0F5 70vw, #fff 70vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+/* ===================== text =============== */
+.giftset__text{
+    text-align: center;
+    margin-top: 85px;
+    margin-bottom: 65px;
+}
+.giftset__subtitle{
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #415167;
+}
+.giftset__title{
+    font-family: Montserrat;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 34px;
+    color: #415167;
+}
+
+/* ================= cards ================= */
+.giftset__wrapper{
+    display: flex;
+}
+.card{
+    position: relative;
+    display:none;
+    margin-left: 300px;
+    width: 100%;
+    max-width: 794px;
+    min-height: 460px;
+    background-color: #FFF;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+.card.active{
+    display:flex;
+}
+.card__image{
+    position: absolute;
+    z-index: 5;
+    left: -250px;
+    top: 50px;
+    width: 100%;
+    max-width: 463px;
+}
+.card__image img{
+    width:100%;
+}
+.card__content{
+    display: flex;
+    flex-direction: column;
+    padding: 65px 65px 65px 300px;
+}
+.card__subtitle{
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #C7A17A;
+    margin-bottom: 12px;
+}
+.card__title{
+    font-family: Nunito;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #232C38;
+    margin-bottom: 12px;
+}
+.card__description{
+    font-family: Nunito;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    color: #151D28;
+    margin-bottom: 24px;
+    text-align: justify;
+    min-height: 110px;
+}
+.card__features{
+    display: flex;
+    justify-content: space-between;
+    gap: 38px;
+    margin-bottom: 45px;
+}
+.card__item{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.card__item img{
+    width: 40px;
+    height: 40px;
+}
+.card__coffe__text{
+    font-family: Nunito;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    color: #415167;
+}
+.card__mountain__subtext{
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #415167;
+}
+.card__content__btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card__btn__first{
+    padding: 13px 40px;
+    background-color: #C7A17A;
+    border-radius: 19px;
+    text-decoration: none;
+    color: #FFF;
+font-family: Nunito;
+font-weight: 700;
+font-size: 16px;
+line-height: 100%;
+text-align: center;
+    cursor: pointer;
+}
+.card__btn__second{
+    text-decoration: none;
+    padding: 8px 62px;
+font-family: Nunito;
+font-weight: 700;
+font-size: 16px;
+line-height: 100%;
+color: #415167;
+    cursor: pointer;
+}
+/* ============== btns =========== */
+
+.tabs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.tab{
+    position: relative;
+    z-index: 5;
+    font-family: Montserrat;
+    font-weight: 900;
+    line-height: 34px;
+    border:none;
+    font-size:30px;
+    cursor:pointer;
+    color: #415167;
+    opacity: 0.3;
+    transition:.3s;
+    height: 154px;
+    width: 88px;
+}
+.tab.active{
+    opacity: 1;
+    background:#fff;
+    font-weight:bold;
+    box-shadow: rgb(237, 240, 245) 0px 4px 4px 0px;
+}
+/* ============= combo-slider ========== */
+
+.combo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(90deg, #fff 70vw, #415167 70vw);
+    background-color: #415167;
+    width: 100%;
+    height: 905px;
+    gap: 64px;
+}
+.combo__text{
+    margin-top: 90px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary);
+}
+.combo__text h2{
+    font-weight: 900;
+    font-size: 1.875rem;
+
+}
+.swiper__combo{
+    width: 1500px;
+    padding: 0 60px;     /* оставит место для кнопок по бокам */
+    box-sizing: border-box;
+}
+.slide__combo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 360px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    background: var(--white);
+}
+.slide__combo img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+.combo__content{
+    padding: 40px;
+}
+.combo__price{
+    font-family: Nunito;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+.combo__price p{
+    font-family: Nunito;
+    font-weight: 300;
+    font-size: 0.875rem;
+    text-decoration: line-through;
+    color: var(--primary);
+}
+.combo__title{
+    font-family: Nunito;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--textGREY);
+    margin-bottom: 10px;
+}
+.combo__description{
+    font-family: Nunito;
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--darkGREY);
+    margin-bottom: 30px;
+}
+
+.combo__prev,
+.combo__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+    transition: background 0.2s;
+}
+.combo__prev { left: 20px; }
+.combo__next { right: 20px; }
+.combo__prev:hover,
+.combo__next:hover { background: #b28f68; }
+
+
+/* ===================================
+============== footer ================
+====================================== */
+
+footer{
+    background: var(--lightGREY);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-family: Nunito;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    color: var(--primary);
+}
+
+
+
+
+
+@media (max-width:1200px) {
+    .card{
+        max-width: 600px;  
+    }
+    .card__image{
+        width:360px;
+        top: 100px;
+        left: -200px; 
+    }
+    .card__content{
+        display: flex;
+        flex-direction: column;
+        padding: 30px 30px 30px 200px;
+    }
+}
+@media (max-width:1024px) {
+    .info__list{
+        justify-content: center;
+    }
+    .coffee__slide{
+        gap: 20px;
+    }
+    .slider__price{
+        font-size: 1rem;
+    }
+    .slider__name{
+        font-size: 1.2rem;
+        margin-top: 4px;
+        margin-bottom: 10px;
+    }
+    .slider__description{
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+    .slider__btns{
+        flex-wrap: wrap;
+    }
+    .card{
+        margin-left: 50px;
+    }
+    .swiper__combo{
+        width: 1200px;
+    }
+}
+@media (max-width:768px) {
+    .coffee-slider{
+        background: linear-gradient(to right, #415167 25vw, #fff 25vw);
+    }
+    .slider__img{
+        width: 100%;
+        max-width: 150px;  
+        object-fit: cover;
+    }
+    .card__image{
+        display: none;
+    }
+    .card__content{
+        display: flex;
+        flex-direction: column;
+        padding: 30px 30px 30px 30px;
+        max-width: 500px;
+    }
+    .tab{
+        height: 154px;
+        width: 48px;
+    }
+}
+@media (max-width:480px) {
+    header{
+        grid-template-columns: 60vw auto;
+    }
+    .video__container{
+        display: none;
+    }
+    .header__title{
+        font-size: 2rem;
+        line-height: 50px;
+    }
+    .slider__primary{
+        font-size: 1rem;
+    }
+    .slider__secondary{
+        font-size: 1.3rem;
+    }
+    .card{
+        margin-left: 0px;
+    }
+    .combo{
+        background: linear-gradient(90deg, #fff 80vw, #415167 80vw);
+    }
+    .combo__text h2{
+    font-size: 1.3rem;
+    }
+}
+@media (max-width: 320px){
+
+}
