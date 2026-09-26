@@ -8,16 +8,14 @@ playBtn.addEventListener('click', ()=>{
 
 
 const swiper1 = new Swiper('.coffee__swiper', {
-    // --- БАЗОВЫЕ НАСТРОЙКИ ---
-    speed: 600,          // Скорость переключения (мс). Чем выше, тем плавнее. 
-    grabCursor: true,    // Курсор мыши превращается в "руку" при наведении
-    spaceBetween: 20,    // Расстояние между слайдами в пикселях (если больше 1 слайда на экране).
+    speed: 600,
+    grabCursor: true,
+    spaceBetween: 20,
 
-    // --- АВТОПРОКРУТКА ---
     autoplay: {
-        delay: 3000,                 // Задержка между слайдами (3 сек).
-        disableOnInteraction: false, // Продолжать ли крутить после клика пользователя.
-        pauseOnMouseEnter: true,     // Останавливать ли, если навести мышь.
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
     },
 
     grid: {
@@ -25,18 +23,21 @@ const swiper1 = new Swiper('.coffee__swiper', {
         fill: 'row',
     },
     slidesPerView: 2,
-    slidesPerGroup: 2,       // = slidesPerView
+    slidesPerGroup: 2,
 
-    // --- НАВИГАЦИЯ (КНОПКИ) ---
     navigation: {
         nextEl: '.coffee__next',
         prevEl: '.coffee__prev',
     },
+
     breakpoints: {
-        320: {rows: 1, slidesPerView: 0, slidesPerGroup: 0, spaceBetween: 20 },
+        0:   { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 20 },
         768: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 30 },
     },
 });
+
+// Зацикливание вручную (loop + grid несовместимы)
+swiper1.on('reachEnd', () => swiper1.slideTo(0));
 
 const swiper2 = new Swiper('.swiper__combo', {
     // --- БАЗОВЫЕ НАСТРОЙКИ ---
