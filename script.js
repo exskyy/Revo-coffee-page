@@ -24,25 +24,18 @@ const swiper1 = new Swiper('.coffee__swiper', {
         rows: 2,
         fill: 'row',
     },
-
-    slidesPerView: 2,  // 3 колонки
-    slidesPerGroup: 1, // прокручивать сразу по 3 слайда (одна "страница")
+    slidesPerView: 2,
+    slidesPerGroup: 2,       // = slidesPerView
 
     // --- НАВИГАЦИЯ (КНОПКИ) ---
     navigation: {
         nextEl: '.coffee__next',
         prevEl: '.coffee__prev',
     },
-      breakpoints: {
-        320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-        },
-        480: {
-        slidesPerView: 2,
-        spaceBetween: 30
-        },
-    }
+    breakpoints: {
+        320: {rows: 1, slidesPerView: 0, slidesPerGroup: 0, spaceBetween: 20 },
+        768: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 30 },
+    },
 });
 
 const swiper2 = new Swiper('.swiper__combo', {
